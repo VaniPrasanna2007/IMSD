@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1 align="center"> Student Registration Form </h1>
+    <h3 align="center"> Student Details </h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <table border="1" cellpadding="10" cellspacing="0" align="center">
+            <tbody>
+                <tr>
+                    <th> Full Name: </th>
+                    <td> 
+                        <input type="text" placeholder="Enter full name" visited>
+                    </td>
+                </tr>
+                <tr>
+                    <th> Email: </th>
+                    <td> 
+                        <input type="email" placeholder="example@email.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th> Password: </th>
+                    <td> 
+                        <input type="password" required>
+                    </td>
+                </tr>
+                  <tr>
+                    <th> Mobile Number: </th>
+                    <td>
+                        <input type="10-digit number" placeholder="10-digit number" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th> Age: </th>
+                    <td> 
+                        <input type="number" min="17" max="70">
+                    </td>
+                </tr>
+                 <tr>
+                    <th> Date of Birth: </th>
+                    <td>
+                        <input type="date" placeholder="dd-mm-yy">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th> Gender: </th>
+                    <td> 
+                        <input type="radio" name="Gender" value="Male"> Male
+                        <input type="radio" name="Gender" value="Female">Female
+                        <input type="radio" name="Gender" value="Other">Other
+
+                    </td>
+                </tr>
+                <tr>
+                    <th> Courses Interested: </th>
+                    <td> 
+                        <input type="checkbox" name="C" value="C">C
+                        <input type="checkbox" name="C++" value="C++" > C++
+                        <input type="checkbox" name="Java" value="Java"> Java
+                        <input type="checkbox" name="C" value="Python"> Python
+                        <input type="checkbox" name="C" value="Web Development"> Web Development
+                    </td>
+                </tr>
+                 <tr>
+                    <th> Branch: </th>
+                    <td> 
+                        <select name="Branch">
+                            <option> --Select Branch-- </option>
+                            <option> CSE </option>
+                            <option> ECE </option>
+                            <option> AIML </option>
+                            <option> EEE </option>
+                            <option> IT </option>
+                            <option> DS </option>
+                            <option> MECH </option>
+                            <option> CIVIL </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th> College Website: </th>
+                    <td>
+                        <input type="url" placeholder="https://www.example.com">
+                    </td>
+                </tr>
+                <tr>
+                    <th> Adress: </th>
+                    <td> 
+                        <textarea name="Enter your adress" id="adress" rows="4" cols="30" placeholder="Enter your adress"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th> Upload Resume: </th>
+                    <td> 
+                        <input type="file" placeholder="Choose file">
+                    </td>
+                </tr>
+                <tr>
+                    <th> Preffered Time Slot: </th>
+                    <td> 
+                        <input type="time" placeholder="--:--">
+                    </td>
+                </tr>
+                <tr>
+                    <th> Skill Level(0-10): </th>
+                    <td> 
+                        <input type="range" min="0" max="10">
+                    </td>
+                </tr>
+                <tr>
+                    <th> Favourite Color: </th>
+                    <td> 
+                        <input type="color">
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>
