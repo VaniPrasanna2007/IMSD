@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Types Demo</title>
+
+  <!-- Internal CSS -->
+  <style>
+    .internal-style {
+      color: teal;        ,
+      font-weight: bold;
+      font-style: italic;
+      margin: 10px 0;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <h2 style="color: chocolate; text-align: center;">
+    This heading is styled with <u>Inline CSS</u>
+  </h2>
+
+  <!-- Internal CSS -->
+  <p class="internal-style">
+    This paragraph is styled with <u>Internal CSS</u> (inside &lt;style&gt; tag in &lt;head&gt;)
+  </p>
+
+  <!-- External CSS -->
+  <p class="external-style">
+    This paragraph is styled with <u>External CSS</u> (from style.css file)
+  </p>
+
+</body>
+</html>
