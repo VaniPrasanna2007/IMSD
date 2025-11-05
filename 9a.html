@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prime and Armstrong Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      margin: 15px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #e67e22;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ba5d16;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+      color: #34495e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prime & Armstrong Checker</h1>
+  
+  <input type="number" id="num" placeholder="Enter a number">
+  <br>
+  <button onclick="checkPrime()">Check Prime</button>
+  <button onclick="checkArmstrong()">Check Armstrong</button>
+  
+  <p id="result"></p>
+
+  <script>
+    // Prime number check
+    function checkPrime() {
+      let num = parseInt(document.getElementById("num").value);
+      if (isNaN(num)) {
+        document.getElementById("result").innerHTML = "Please enter a number!";
+        return;
+      }
+      let isPrime = true;
+
+      if (num <= 1) {
+        isPrime = false;
+      } else {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+      }
+
+      document.getElementById("result").innerHTML =
+        isPrime ? num + " is a Prime Number" : num + " is NOT a Prime Number";
+    }
+
+    // Armstrong number check
+    function checkArmstrong() {
+      let num = parseInt(document.getElementById("num").value);
+      if (isNaN(num)) {
+        document.getElementById("result").innerHTML = "Please enter a number!";
+        return;
+      }
+      let sum = 0, temp = num;
+      let digits = num.toString().length;
+
+      while (temp > 0) {
+        let digit = temp % 10;
+        sum += Math.pow(digit, digits);
+        temp = Math.floor(temp / 10);
+      }
+
+      document.getElementById("result").innerHTML =
+        sum === num ? num + " is an Armstrong Number" : num + " is NOT an Armstrong Number";
+    }
+  </script>
+</body>
+</html>
